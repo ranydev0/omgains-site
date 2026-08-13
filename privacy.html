@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — OMGains</title>
-  <meta name="description" content="How OMGains handles your data — in short, it stays on your device.">
+  <meta name="description" content="How OMGains handles your data — what stays on your device, what leaves it, and who receives it.">
   <link rel="icon" href="icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,48 +14,139 @@
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
     </nav>
   </header>
 
   <main class="legal">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: July 9, 2026</p>
+    <p class="updated">Last updated: August 14, 2026</p>
 
-    <p class="lede">OMGains is built to keep your personal information on your device. Your workouts, meals, history, and photos are stored locally and are never uploaded to us. A few specific features contact third-party services. This policy explains exactly what leaves your device and when.</p>
+    <p class="lede">OMGains keeps your training on your phone. Workouts, recipes, grocery carts, progress photos and history are stored on the device and are not uploaded to us unless you switch on cloud backup. Three things reach a server: the AI builders, when you tap generate; cloud backup, once you turn it on; and the anonymous counts and crash reports described below. This policy sets out exactly what leaves your device, when, and who receives it.</p>
 
     <section>
-      <h2>What we store on your device</h2>
-      <p>Workouts, exercises, meal recipes, grocery baskets, progress history, profile photo, theme, units, and other preferences are saved locally on your device using the operating system’s standard storage. We do not run servers that hold this data.</p>
+      <h2>What stays on your device</h2>
+      <p>Workouts, exercises, recipes, grocery carts, folders, training history, your weight log, progress photos, your profile picture and name, body stats, goals, dietary profile, reminders, theme, units and every other preference are saved on this device using the operating system’s own storage. Photos and videos you add are copied into the app’s private storage on the device. None of it is sent anywhere by default.</p>
     </section>
 
     <section>
-      <h2>Ingredient search</h2>
-      <p>When you search for an ingredient while building a recipe, the text you type is sent to Open Food Facts (openfoodfacts.org), a third-party open food database, to return suggestions and ingredient images. Only the search term is sent — not your recipes, meals, or any account information. If you never use ingredient search, no such requests are made.</p>
+      <h2>Accounts</h2>
+      <p>Nothing in the app requires an account. The AI builders create an anonymous identity on our server, described below, which is not an account: there is no email, no password and no profile. Signing in is needed for two things only, cloud backup and keeping any AI credits you have bought if you change or reinstall on another phone. You sign in with Apple or Google. We receive an identifier from that provider and your email address, or the relay address Apple gives us if you choose to hide yours. It is used to identify your account and, if we ever have to, to contact you about your subscription. Signing in moves the anonymous identity you already had onto the new account rather than creating a second one, so nothing you have generated or paid for is lost.</p>
     </section>
 
     <section>
-      <h2>App updates</h2>
-      <p>The app may check for over-the-air updates so you receive fixes and improvements. This involves a request to the update service and does not transmit your personal data.</p>
+      <h2>The AI workout builder</h2>
+      <p>The AI builders are the only features that send what you have entered off your device, and they run only when you tap generate. We ask for your agreement before the first one runs, and you can withdraw it at any time in Settings under AI features. When you build a workout we send the split and which day of it this is, the target muscles, your goal, rep focus, experience level, how many days a week you train, session length, intensity, session style, your equipment list, anything you typed in the notes box, whether you read weights in kilograms or pounds, and the names of up to forty workouts already in your library so the result is not one you already have. Only the names are sent, never their contents. Your height, weight, age and sex are sent only when you agree to it on that particular build: we ask every time, whether or not they are already in your profile, and declining still produces a workout.</p>
+    </section>
+
+    <section>
+      <h2>The AI recipe builder</h2>
+      <p>When you build a recipe we send the meal type, the number of servings, anything you typed, your dietary profile (what you avoid, your diet style, and any daily calorie or protein targets), whether you cook in metric or imperial, and the names of up to forty recipes already in your library so you are not handed something you have already saved. As with workouts, only the names are sent.</p>
+    </section>
+
+    <section>
+      <h2>What the builders never send</h2>
+      <p>Neither builder sends your training history, the contents of your saved workouts or recipes, your progress photos, your profile picture, your name, your weight log, your grocery carts or your reminders.</p>
+    </section>
+
+    <section>
+      <h2>How AI requests are handled</h2>
+      <p>Requests go to our own server, which adds nothing about you and passes them to the model provider. Today that is Anthropic, which runs the Claude model that writes the result, and it is returned to your device. We do not store the content of your requests or of the results once the response has been delivered, and neither we nor the provider use them to train models. If the provider ever changes we will update this policy. What we do keep is one row per generation: which builder it was, when it happened, how many tokens it used, and the identifiers described below. That row contains no part of what you asked for or what came back. It exists so free trials and subscription limits can be enforced and abuse can be stopped.</p>
+    </section>
+
+    <section>
+      <h2>Recipe photographs</h2>
+      <p>When a recipe finishes, our server asks an image provider to draw a photograph of the dish. Today that provider is fal.ai. It is sent three things: the recipe name, the meal type, and up to eight ingredient names from the recipe that was just written for you. Nothing you typed reaches it, and neither does your dietary profile, your identifiers, or anything else about you. The picture comes back to your device as image data rather than a link, so it is not stored or published anywhere on the internet, and it is saved on your phone only if you save the recipe. If it cannot be drawn the recipe is unaffected and the app shows artwork it composes on your device instead.</p>
+    </section>
+
+    <section>
+      <h2>Anonymous identifier</h2>
+      <p>The first time you use an AI feature, the app creates an anonymous user on our server. It is not an account: there is no email, password or profile, and you never see a sign-in. It holds your subscription state, your credit balance and the generation records above, and nothing else about you.</p>
+    </section>
+
+    <section>
+      <h2>Device identifier</h2>
+      <p>The free trial is three generations in each builder per device, and the daily ceiling on recipe photographs is counted per device too, so we need a way to recognise a device that is not reset by clearing the app. On Android we read the standard system identifier for this app; on iOS we store a random value in the system keychain, which survives the app being deleted. This value is never held by us as it is: the app sends it with the request, our server immediately converts it into an irreversible hash using a secret only we hold, and stores only that hash. We cannot recover the original from it, and it cannot be matched against an identifier from any other app or service. It is used to enforce the free trial and the picture limit, and never for advertising, profiling, or tracking you across apps. Erasing your device clears it.</p>
+    </section>
+
+    <section>
+      <h2>Subscriptions and credits</h2>
+      <p>OMGains Pro and the AI credit packs are sold through the Apple App Store or Google Play. We use RevenueCat to tell us whether your subscription is active and when a pack has been bought. Your payment details are handled entirely by the store and are never seen by us or by RevenueCat. RevenueCat receives the identifier for your OMGains user and the purchase receipt from the store, and tells our server when your subscription state or credit balance changes.</p>
+    </section>
+
+    <section>
+      <h2>Cloud backup</h2>
+      <p>Cloud backup is off by default and does nothing until you switch it on, which needs an active Pro subscription and a signed-in account. What is backed up is your workouts, your recipes, your grocery carts and your folders, as data. What is not backed up is your progress photos, your profile picture, any photo or video attached to a meal, exercise or cart, your training history, your weight log, your body stats, your reminders and your settings. Those stay on the phone. Progress photos are the most personal thing in this app, and holding them on a server is a promise we have chosen not to make. A backed-up record includes the file name of a picture attached to it, but never the picture itself.</p>
+    </section>
+
+    <section>
+      <h2>Deleting a backup</h2>
+      <p>Backed-up data is stored against your account and is readable only by you. Delete cloud backup in Settings removes it from our servers and switches backup off, and everything on your phone stays exactly as it is. If your subscription ends you can still restore what is already there; what stops is backing anything further up.</p>
+    </section>
+
+    <section>
+      <h2>Usage counts</h2>
+      <p>So we can tell which parts of the app are worth building on, the app records anonymous counts of events such as a screen being opened, a generation being started, the paywall being shown, or a purchase succeeding or failing. Each record holds an event name from a fixed set, a short label saying where it came from, the platform, the app version, a timestamp, and a random identifier created on this install. There is no free-text field anywhere in it, so it cannot carry the contents of your workouts, recipes, photos or notes even by accident. It is first party: it lands in our own database, is read only in aggregate, and is never sold, shared, or combined with data from any other source. The random identifier is separate from every other identifier in the app and is cleared when you erase all data in Settings.</p>
+    </section>
+
+    <section>
+      <h2>Crash reports</h2>
+      <p>When the app crashes or hits an unexpected error, a report is sent to Sentry, a third-party error monitoring service, so the fault can be found and fixed. A report describes the failure itself: the error, where in the code it happened, your device model, its operating system version, the app version and the release channel. Screenshots, view hierarchies, session recording and request bodies are all switched off, IP addresses are not attached, and console logs are stripped before sending. A report does not contain your workouts, recipes, photos, or anything you typed.</p>
+    </section>
+
+    <section>
+      <h2>Reminders and alarms</h2>
+      <p>Workout reminders, the rest timer alarm and the notice before a free trial ends are all scheduled on your device by the operating system. Nothing about them is sent to us, and we send no push notifications from our servers.</p>
+    </section>
+
+    <section>
+      <h2>Ingredient search and pictures</h2>
+      <p>Ingredient search and ingredient pictures both run entirely on your device. The app ships with a built-in list of ingredient names and with every ingredient picture it can show, so the words you type while building a recipe or a cart are never sent anywhere, and no request is made to draw a thumbnail. This holds whether or not you are online.</p>
+    </section>
+
+    <section>
+      <h2>App updates and settings</h2>
+      <p>The app checks for over-the-air updates so you receive fixes without waiting on a store release, and reads a small table of settings from our server, such as how many generations the free trial gives. Both are requests for something rather than reports about you, and neither sends your personal data.</p>
     </section>
 
     <section>
       <h2>Permissions</h2>
-      <p>The app requests permissions only when you tap a feature that needs them, and uses them solely for that purpose: your photo library and camera (and microphone, for video) to set a profile picture and add progress and recipe photos or videos; and notifications, so it can send the workout reminders you enable. You can decline or revoke any of these in your device settings.</p>
+      <p>The app asks for a permission only when you tap something that needs it, and uses it for nothing else. Your photo library, so you can set a profile picture and add progress photos, meal pictures and videos, and cart photos. Notifications, so it can deliver the reminders and timer alarms you set. The app does not use your camera or your microphone, and on Android those permissions are blocked in the build. You can decline or revoke either permission in your device settings.</p>
     </section>
 
     <section>
-      <h2>Backups and exports</h2>
-      <p>If you export or back up your data, the file is generated on your device and shared only through the destination you choose. OMGains does not send exported data anywhere on its own.</p>
+      <h2>Allergen and dietary flags</h2>
+      <p>The recipe builder can flag ingredients that appear to match things you have said you avoid. These flags are produced by a language model reading ingredient names. They are a prompt to check, not a verified result, and they can be wrong in both directions. OMGains does not provide medical, nutritional, or dietary advice. Always read the label on the food you buy, and speak to a qualified professional about allergies or dietary needs.</p>
+    </section>
+
+    <section>
+      <h2>Who else is involved</h2>
+      <p>The companies named in this policy are the only ones that receive anything: Anthropic, for AI generation; fal.ai, for recipe photographs; RevenueCat, for subscription and purchase state; Sentry, for crash reports; Supabase, which hosts our server and database; and Apple and Google, for sign-in, notifications and payment. There is no advertising in OMGains, no advertising or attribution SDK, and no third-party analytics service. Nothing you log is ever sold. Because these companies operate their own infrastructure, data described here may be processed in countries other than your own, including the United States.</p>
+    </section>
+
+    <section>
+      <h2>How long we keep things</h2>
+      <p>Generation records are kept for as long as they are doing their job: the free-trial count is a lifetime count, and the daily and monthly subscription limits read only the last thirty days. Usage counts and crash reports are kept while they are still useful for finding faults and understanding how the app is used. Backed-up records are kept until you delete them or delete your account.</p>
     </section>
 
     <section>
       <h2>Deleting your data</h2>
-      <p>You can clear all locally stored data at any time from More → Clear all data. Uninstalling the app also removes all local data.</p>
+      <p>Erase all data, in the danger zone at the bottom of Settings, clears everything the app holds on this phone, including the random identifier used for usage counts. Delete cloud backup removes your backed-up records from our servers. Uninstalling the app removes everything stored locally. To have your account and everything held against it deleted, email <a href="mailto:support@omgains.app">support@omgains.app</a> from the address you signed in with. One thing survives on purpose: the hashed device identifier on the rows that count AI generations. Those rows are what keep the free trial honest, they are detached from your account when it is deleted, and the hash cannot be traced back to you or matched against any other service.</p>
+    </section>
+
+    <section>
+      <h2>Your rights</h2>
+      <p>Depending on where you live, you may have the right to ask what we hold about you, to have it corrected or deleted, or to receive a copy of it. Because almost everything lives on your phone there is usually very little for us to answer with, but ask and we will. Email <a href="mailto:support@omgains.app">support@omgains.app</a>.</p>
     </section>
 
     <section>
       <h2>Children</h2>
-      <p>OMGains is a general-purpose fitness tracking app and is not directed at children under 13.</p>
+      <p>OMGains is a general-purpose fitness app intended for people aged 13 and over. It is not directed at children under 13, and we do not knowingly collect information from them. If you believe a child has provided us with information, email us and we will remove it.</p>
+    </section>
+
+    <section>
+      <h2>Changes to this policy</h2>
+      <p>If this policy changes, the date at the top changes with it, and the updated version appears both in the app and on this page.</p>
     </section>
 
     <section>
@@ -68,6 +159,7 @@
     <div class="foot-links">
       <a href="index.html">Home</a>
       <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
       <a href="mailto:support@omgains.app">support@omgains.app</a>
     </div>
     © 2026 OMGains
